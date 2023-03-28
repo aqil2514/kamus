@@ -36,9 +36,9 @@ const uhfp = document.getElementById('uhfp');
 const gb = document.getElementById('gb');
 const gbp = document.getElementById('gbp');
 
-centerImage.addEventListener('click', function(){
-    centerImage.classList.toggle('center-image-click');
-})
+// centerImage.addEventListener('click', function(){
+//     centerImage.classList.toggle('center-image-click');
+// })
 
 kamusInggris.addEventListener('click', function(){
     
