@@ -28,7 +28,6 @@ header h1, footer p{
 /* MAIN MENU */
 
 .main-menu{
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     overflow: hidden;
@@ -255,10 +254,15 @@ hr{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 900px;
+    width: 75%;
+    max-width: 900px;
+    height: 80%;
+    max-height: 500px;
     margin: 0 auto;
     border: 3px solid blue;
     border-radius: 1rem;
+    position: relative;
+    top: 15%;
 }
 
 .list-content li{
@@ -313,9 +317,9 @@ hr{
 
 .animation-slide-down{
     height: 80px;
-    transform: scale(1.2);
-    background-color: lightblue;
-    border-color: lightblue;
+    transform: scale(1.2) !important;
+    background-color: lightblue !important;
+    border-color: lightblue !important;
 }
 
 /* FOOTER */
@@ -324,6 +328,7 @@ footer{
     height: 40px;
     background: linear-gradient(45deg, black,blue);
     border-top: 5px solid yellowgreen;
+    position: relative;
     z-index: 10;
     overflow: hidden;
     animation: bersinar ease-in-out alternate 2s infinite;
@@ -462,6 +467,7 @@ footer p{
     }
 
     .container-menu{
+        display: block;
         width: 50%;
         min-width: 325px;
         height: 90%;
@@ -476,8 +482,6 @@ footer p{
       }
 
     .list-content{
-        margin: 1rem auto;
-        padding-top: 6rem;
         text-align: center;
     }
 

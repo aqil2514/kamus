@@ -62,7 +62,7 @@ sBackButton.forEach(function(e){
         cytwp.style.display='none';
         gbp.style.display='none';
         mainMenu.style.display='flex';
-        headerH1.innerHTML='Kamus Offline';
+        headerH1.innerHTML='My Dictionary';
     })
 })
 
@@ -84,6 +84,7 @@ sEnglishV.addEventListener('click', function(){
         cytwp.style.display='none';
         gbp.style.display='none';
         mainMenu.style.display='none';
+        headerH1.innerHTML='17 Camels and 3 Sons';
     }
     else if(englishDM[2].selected){
         seCams.style.display='none';
@@ -92,6 +93,7 @@ sEnglishV.addEventListener('click', function(){
         cytwp.style.display='none';
         gbp.style.display='none';
         mainMenu.style.display='none';
+        headerH1.innerHTML='A Merchant and his Donkey';
     }
     else if(englishDM[3].selected){
         seCams.style.display='none';
@@ -100,6 +102,7 @@ sEnglishV.addEventListener('click', function(){
         cytwp.style.display='none';
         gbp.style.display='none';
         mainMenu.style.display='none';
+        headerH1.innerHTML='Change yourself and not the world'
     }
     else if(englishDM[4].selected){
         seCams.style.display='none';
@@ -108,6 +111,7 @@ sEnglishV.addEventListener('click', function(){
         cytwp.style.display='flex';
         gbp.style.display='none';
         mainMenu.style.display='none';
+        headerH1.innerHTML='Unhelpful Friends'
     }
     else if(englishDM[5].selected){
         seCams.style.display='none';
@@ -116,5 +120,6 @@ sEnglishV.addEventListener('click', function(){
         cytwp.style.display='none';
         gbp.style.display='flex';
         mainMenu.style.display='none';
+        headerH1.innerHTML='Greedy Boy';
     }
 })
