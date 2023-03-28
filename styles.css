@@ -19,7 +19,7 @@ header{
     width: 100%;
     height: 10%;
     background: linear-gradient(45deg, black,blue);
-    border-bottom: 3px solid yellow;
+    border-bottom: 0.3rem solid yellow;
     position: fixed;
     z-index: 10;
     animation: bersinar ease-in-out alternate 2s infinite;
@@ -33,21 +33,6 @@ header h1, footer p{
     font-family: Impact;
     letter-spacing: 5px;
 }
-
-header a{
-    position: absolute;
-    left: 20px;
-    top: 20px;
-    z-index: 999;
-    color: black;
-    font-weight: 900;
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: yellow;
-    padding: 8px;
-    border-radius: 10px;
-}
-
 /* MAIN MENU */
 
 .main-menu{
@@ -240,11 +225,6 @@ hr{
     right: 10%;
 }
 
-.section-main-menu:hover{
-    transform: scale(1.2);
-    animation: text-shine ease-out alternate 2s infinite;
-}
-
 /* MENU KONTENT  */
 .content-menu{
     width: 100%;
@@ -415,3 +395,82 @@ footer p{
         color: black;
     }
 }
+
+/* TABLET ORIENTATION  */
+@media(max-width: 768px){
+    html{
+        font-size: 75%;
+    }
+
+    .main-menu{
+        background: linear-gradient(45deg, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url(img/bg-main-301.jpeg);
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .center-image, .horizontal, .vertikal{
+        display: none;
+    }
+
+    .kamus-inggris, .kamus-arab, .latihan-inggris, .latihan-arab{
+    display: block !important;
+    width: 100%;
+    line-height: 1.5;
+    position: static !important;
+    }
+    
+    .kamus-inggris{
+        margin: 10rem 0rem 1rem 0rem;
+    }
+
+    .judul-inggris, .kamus-inggris p, .judul-latihan-inggris, .latihan-inggris p{
+        text-align: left !important;
+        margin-left: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    .kamus-inggris::after, .kamus-arab::after, .latihan-inggris::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 0.3rem;
+        background-color: white;
+    }
+    
+    .kamus-arab{
+        margin: 0rem -3rem 2rem 0rem;
+    }
+
+    .kamus-arab::after{
+        margin: 0 0 1rem -1rem;
+    }
+
+    .judul-arab, .kamus-arab p{
+        text-align: right !important;
+    }
+
+    .judul-arab{
+        margin: -5rem 6rem 0rem 0rem;
+    }
+
+    .kamus-arab P{
+        margin: 1rem 6rem;
+    }
+
+    .latihan-inggris{
+        margin-top: -8rem;
+        margin-bottom: -5rem;
+    }
+
+    .latihan-arab{
+        margin-bottom: 3rem;
+    }
+
+    .judul-latihan-arab, .latihan-arab p{
+        text-align: right !important;
+        margin-right: 3rem;
+    }
+    }
