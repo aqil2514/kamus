@@ -400,10 +400,10 @@ footer p{
         background-size: cover;
         position: relative;
     }
-
+/* 
     .center-image, .horizontal, .vertikal{
         display: none;
-    }
+    } */
 
     .container-menu{
         display: block;
