@@ -29,7 +29,6 @@ header h1, footer p{
 
 .main-menu{
     flex-direction: row;
-    flex-wrap: wrap;
     overflow: hidden;
     align-items: center;
     justify-content: space-between;
@@ -400,7 +399,7 @@ footer p{
         background-attachment: scroll;
         background-size: cover;
         flex-direction: column;
-        overflow-y: scroll;
+        max-height: 607px;
     }
 
     .center-image, .horizontal, .vertikal{
@@ -410,6 +409,7 @@ footer p{
     .kamus-inggris, .kamus-arab, .latihan-inggris, .latihan-arab{
     display: block !important;
     width: 100%;
+    max-height: 36px !important;
     line-height: 1.5;
     position: static !important;
     }
