@@ -1,11 +1,17 @@
+alert('Masih dalam pengembangan. \nKemungkinan masih ada beberapa bug');
 const headerH1= document.querySelector('header h1');
 const mainMenu = document.getElementById('main-menu');
 const centerImage = document.querySelector('.center-image');
 const kamusInggris = document.querySelector('.kamus-inggris');
 const judulInggris = document.querySelector('.judul-inggris');
 const menuKamusInggris = document.querySelector('.kamus-inggris-menu');
-const mkiKembali = document.querySelector('.dir-button button:first-of-type');
-const mkiTutup = document.querySelector('.dir-button button:nth-of-type(2)');
+const englishDM = document.getElementById('english-menu');
+const sEnglishV = document.querySelector('.button-eshow');
+const eClose = document.querySelector('.button-eclose');
+
+eClose.addEventListener('click', function(){
+    menuKamusInggris.style.display='none';
+})
 
 // 17 CAMELS AND 3 SONS
 
@@ -42,54 +48,11 @@ judulInggris.addEventListener('click', function(){
     menuKamusInggris.style.display='flex';
 })
 
-mkiTutup.addEventListener('click', function(){
-    menuKamusInggris.style.display='none';
-})
-
 const vocabLeave = function(e){
     setTimeout(function(){
         e.classList.remove('animation-slide-down');
     },5000);
 }
-
-vocabCams.forEach(function(e){
-    e.addEventListener('click', function(){
-        e.classList.toggle('animation-slide-down');
-    })
-    e.addEventListener('mouseleave', function(){
-        vocabLeave(e);
-    })
-})
-
-sCams.addEventListener('click', function(){
-    mainMenu.style.display='none';
-    seCams.style.display='flex';
-    headerH1.innerHTML='Vocabularies of 17 Camels and 3 Sons';
-})
-
-amhd.addEventListener('click', function(){
-    mainMenu.style.display='none';
-    amhdp.style.display='flex';
-    headerH1.innerHTML='Vocabularies of A Merchant and His Donkey'
-})
-
-cytw.addEventListener('click', function(){
-    mainMenu.style.display='none';
-    cytwp.style.display='flex';
-    headerH1.innerHTML='Vocabularies of Change Yourself and not the World'
-})
-
-uhf.addEventListener('click', function(){
-    mainMenu.style.display='none';
-    uhfp.style.display='flex';
-    headerH1.innerHTML='Vocabularies of Unhelpful Friends'
-})
-
-gb.addEventListener('click', function(){
-    mainMenu.style.display='none';
-    gbp.style.display='flex';
-    headerH1.innerHTML="Vocabularies of Greedy Boy"
-})
 
 sBackButton.forEach(function(e){
     e.addEventListener('click', function(){
@@ -101,4 +64,50 @@ sBackButton.forEach(function(e){
         mainMenu.style.display='flex';
         headerH1.innerHTML='Kamus Offline';
     })
+})
+
+sEnglishV.addEventListener('click', function(){
+    if(englishDM[0].selected){
+        alert('This is not selection')
+    }
+    else if(englishDM[1].selected){
+        seCams.style.display='flex';
+        amhdp.style.display='none';
+        uhfp.style.display='none';
+        cytwp.style.display='none';
+        gbp.style.display='none';
+        mainMenu.style.display='none';
+    }
+    else if(englishDM[2].selected){
+        seCams.style.display='none';
+        amhdp.style.display='flex';
+        uhfp.style.display='none';
+        cytwp.style.display='none';
+        gbp.style.display='none';
+        mainMenu.style.display='none';
+    }
+    else if(englishDM[3].selected){
+        seCams.style.display='none';
+        amhdp.style.display='none';
+        uhfp.style.display='flex';
+        cytwp.style.display='none';
+        gbp.style.display='none';
+        mainMenu.style.display='none';
+    }
+    else if(englishDM[4].selected){
+        seCams.style.display='none';
+        amhdp.style.display='none';
+        uhfp.style.display='none';
+        cytwp.style.display='flex';
+        gbp.style.display='none';
+        mainMenu.style.display='none';
+    }
+    else if(englishDM[5].selected){
+        seCams.style.display='none';
+        amhdp.style.display='none';
+        uhfp.style.display='none';
+        cytwp.style.display='none';
+        gbp.style.display='flex';
+        mainMenu.style.display='none';
+    }
 })

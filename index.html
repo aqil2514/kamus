@@ -17,24 +17,22 @@
                 <p>Vocabularies of English</p>
             </div>
             <!-- MENU KAMUS BAHASA INGGRIS -->
-            <div class="kamus-inggris-menu" style="display:none; top: 32%; left: 8%;">
-                <span>
-                    <h1>Pilih Judul!</h1>
-                </span><span class=baris-pertama>
-                <button type="button" style="position: relative;" id="17cams">17 Camels and 3 Sons</button>
-                <button type="button" style="position: relative;" id="amhd">A Merchant and his Donkey</button>
-                <button type="button" style="position: relative;" id="cytw">Change Yourself and not the World</button>
-                <button type="button" style="position: relative;" id="uhf">Unhelpful Friends</button>
-            </span>><span class=baris-kedua>
-                <button type="button" style="position: relative;" id="gb">Greedy Boy</button>
-                <button type="button" style="position: relative;">Soon</button>
-                <button type="button" style="position: relative;">Soon</button>
-                <button type="button" style="position: relative;">Soon</button>
-            </span><span class="dir-button">
-                <button>Kembali</button>
-                <button>Tutup</button>
-                <button>Berikutnya</button>
-            </span>
+            <div class="kamus-inggris-menu" style="display:none">
+                <h1>Pilih Judul!</h1>
+                <div>
+                    <select name="english-menu" id="english-menu">
+                        <option value="0">Select one</option>
+                        <option value="1" id="17cams">17 Camels and 3 Sons</option>
+                        <option value="2" id="amhd">A Merchant and his Donkey</option>
+                        <option value="3" id="cytw">Change yourself and not the world</option>
+                        <option value="4" id="uhf">Unhelpful Friends</option>
+                        <option value="5" id="gb">Greedy Boy</option>
+                    </select>
+                </div>
+            <div class="button-emenu">
+                <button class="button-eshow">Tampilkan</button>
+                <button class="button-eclose">Tutup</button>
+            </div>
             </div>
             <div class="kamus-arab  section-main-menu">
                 <h1 class="judul-arab">قموص اللغة العربية</h1>
@@ -150,7 +148,7 @@
             <button id="back-content-button" class="back-content-button">Kembali</button>
         </div>
         <footer>
-            <p>Good Luck :)</p>
+            <p>Created by Muhamad Aqil Maulana :)</p>
         </footer>
         <script src="script.js"></script>
     </body>
