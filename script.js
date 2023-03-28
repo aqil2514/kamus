@@ -1,4 +1,4 @@
-alert('Masih dalam pengembangan. \nKemungkinan masih ada beberapa bug');
+// alert('Masih dalam pengembangan. \nKemungkinan masih ada beberapa bug');
 const headerH1= document.querySelector('header h1');
 const mainMenu = document.getElementById('main-menu');
 const centerImage = document.querySelector('.center-image');
@@ -18,7 +18,7 @@ eClose.addEventListener('click', function(){
 const sCams = document.getElementById('17cams');
 const seCams =document.getElementById('17camels');
 const sBackButton = document.querySelectorAll('#back-content-button');
-const vocabCams = document.querySelectorAll('#vocab-camels li');
+const vocabs = document.querySelectorAll('#vocabs li');
 
 // A MERCHANT AND HIS DONKEY
 const amhd = document.getElementById('amhd');
@@ -51,7 +51,7 @@ judulInggris.addEventListener('click', function(){
 const vocabLeave = function(e){
     setTimeout(function(){
         e.classList.remove('animation-slide-down');
-    },5000);
+    },3000);
 }
 
 sBackButton.forEach(function(e){
@@ -63,6 +63,13 @@ sBackButton.forEach(function(e){
         gbp.style.display='none';
         mainMenu.style.display='flex';
         headerH1.innerHTML='Kamus Offline';
+    })
+})
+
+vocabs.forEach(function(e){
+    e.addEventListener('click', function(){
+        e.classList.toggle('animation-slide-down');
+        vocabLeave(e);
     })
 })
 

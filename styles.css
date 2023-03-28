@@ -1,16 +1,8 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-body{
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-  
-  body::-webkit-scrollbar{
-   display: none;
-  }
 
 header{
     display: flex;
@@ -39,7 +31,7 @@ header h1, footer p{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow: auto;
+    overflow: hidden;
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(45deg, rgba(245, 3, 3, 0.7), rgba(255, 90, 90,0.7)), url(img/bg-main-301.jpeg);
@@ -79,6 +71,7 @@ header h1, footer p{
     border-radius: 10px;
     animation: bersinar-border 2s ease-in-out infinite alternate;
     transition: 0.3s display;
+    position: relative;
 }
 
 .kamus-inggris-menu h1{
@@ -114,7 +107,8 @@ header h1, footer p{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 35%;
+    position: absolute;
+    bottom: 5%;
 }
 
 .button-eshow, .button-eclose{
@@ -128,6 +122,14 @@ header h1, footer p{
     font-weight: bold;
     color: white;
     cursor: pointer;
+}
+
+.button-eshow{
+    margin-left: 5%;
+}
+
+.button-eclose{
+    margin-right: 5%;
 }
 
 .kamus-inggris-menu button:hover{
@@ -256,6 +258,7 @@ hr{
     width: 900px;
     margin: 0 auto;
     border: 3px solid blue;
+    border-radius: 1rem;
 }
 
 .list-content li{
@@ -310,41 +313,10 @@ hr{
 
 .animation-slide-down{
     height: 80px;
+    transform: scale(1.2);
     background-color: lightblue;
     border-color: lightblue;
 }
-
-/* .title-content {
-    position: relative;
-    text-align: center;
-    top: -200px;
-    left: 500px;}
-
-.list-content{
-    color: black;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    margin-left: 50px;
-}
-
-.list-content ul{
-    display: flex;
-    align-items: center;
-}
-
-.list-content li{
-    list-style: none;
-    border: 3px solid green;
-    margin: 0 20px;
-    width: 100px;
-    border-radius: 10px;
-    height: 40px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-} */
 
 /* FOOTER */
 footer{
@@ -423,7 +395,7 @@ footer p{
         background-attachment: scroll;
         background-size: cover;
         flex-direction: column;
-        overflow: hidden;
+        overflow-y: scroll;
     }
 
     .center-image, .horizontal, .vertikal{
@@ -487,6 +459,26 @@ footer p{
     .judul-latihan-arab, .latihan-arab p{
         text-align: right !important;
         margin-right: 3rem;
+    }
+
+    .container-menu{
+        width: 50%;
+        min-width: 325px;
+        height: 90%;
+        max-height: 360px;
+        overflow: scroll;
+        position: relative;
+        top: 15%;
+    }
+
+    .container-menu::-webkit-scrollbar {
+        display: none;
+      }
+
+    .list-content{
+        margin: 1rem auto;
+        padding-top: 6rem;
+        text-align: center;
     }
 
     footer p{
