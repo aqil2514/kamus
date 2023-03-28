@@ -91,7 +91,7 @@ header h1, footer p{
 }
 
 .kamus-inggris-menu select{
-    width: 35rem;
+    width: 100%;
     height: 2.5rem;
     background: white;
     text-align: center;
@@ -412,7 +412,7 @@ footer p{
 }
 
 /* TABLET ORIENTATION  */
-@media(max-width: 768px){
+@media(max-width: 992px){
     html{
         font-size: 75%;
     }
