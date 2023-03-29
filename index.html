@@ -41,7 +41,7 @@
             <img src="img/bg-301.jpeg" class="center-image">
             <hr class="horizontal">
             <hr class="vertikal">
-            <div class="latihan-inggris  section-main-menu" style="position: absolute;">
+            <div id="button-eEnglish" class="latihan-inggris  section-main-menu" style="position: absolute;">
                 <h1 class="judul-latihan-inggris">English Test</h1>
                 <p>The test of English Vocabularies</p>
             </div>
@@ -147,9 +147,43 @@
             </div>
             <button id="back-content-button" class="back-content-button">Kembali</button>
         </div>
+
+        <!-- ENGLISH TEST -->
+        <section class="e-test" style="display: none;">
+        <div class="container-test">
+            <div>
+                <p class="soal" id="questions"></p>
+            </div>
+            <div class="jawaban">
+                <div class="jaw1">
+                <input type="radio" data-id="0" name="jawaban" id="jaw-0">
+                <label for="jaw-0" id="text-jaw0"></label>
+            </div>
+            <div class="jaw2">
+                <input type="radio" data-id="1" name="jawaban" id="jaw-1">
+                <label for="jaw-1" id="text-jaw1"></label>
+            </div>
+            <div class="jaw3">
+                <input type="radio" data-id="2" name="jawaban" id="jaw-2">
+                <label for="jaw-2" id="text-jaw2"></label>
+            </div>
+            <div class="jaw4">
+                <input type="radio" data-id="3" name="jawaban" id="jaw-3">
+                <label for="jaw-3" id="text-jaw3"></label>
+            </div>
+            </div>
+            <div class="tombol">
+                <button id="jawab" onclick="nextQuestion()">Jawab</button>
+                <button id="kembali" onClick="backToMenu()">Kembali</button>
+            </div>
+        </div>
+        </section>
+
         <footer>
             <p>Created by Muhamad Aqil Maulana :)</p>
         </footer>
         <script src="script.js"></script>
     </body>
 </html>
+
+<!-- 1, 0, 3, 3, 0, 2 -->
