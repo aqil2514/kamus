@@ -4,6 +4,8 @@ const mainMenu = document.getElementById("main-menu");
 const centerImage = document.querySelector(".center-image");
 const kamusInggris = document.querySelector(".kamus-inggris");
 const judulInggris = document.querySelector(".judul-inggris");
+const judulArab = document.querySelector(".judul-arab");
+const judulLatArab = document.querySelector(".judul-latihan-arab");
 const menuKamusInggris = document.querySelector(".kamus-inggris-menu");
 const goToETest = document.getElementById('button-eEnglish');
 const englishDM = document.getElementById("english-menu");
@@ -14,6 +16,14 @@ const eTest = document.querySelector('.e-test');
 eClose.addEventListener("click", function () {
   menuKamusInggris.style.display = "none";
 });
+
+judulArab.onclick=function(){
+  alert('Belum diupdate');
+} ;
+
+judulLatArab.onclick=function(){
+  alert('Belum diupdate');
+} ;
 
 // 17 CAMELS AND 3 SONS
 
